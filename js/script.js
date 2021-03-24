@@ -10,17 +10,27 @@ LISTA COGNOMI
 
 // 1.
 var lastNameList = ['rossi', 'duzioni', 'bagnasco', 'giorgini', 'balsano', 'perlari'];
-console.log(lastNameList); //test
+// console.log(lastNameList); //test
+var lastNameInsert = [];
+var end = '-1';
+do{
+    var userLastName = prompt('Insert lastname (-1 to end)').toLocaleLowerCase();
+    if(userLastName != end){
+        lastNameList.push(userLastName);
+        lastNameInsert.push(userLastName);
+    }
+} while (userLastName != end)
 
-var userLastName = prompt('Insert lastname').toLocaleLowerCase();
-console.log(userLastName); //test
+// console.log(userLastName); //test
 
 // 2.
-lastNameList.push(userLastName);
 console.log(lastNameList); //test
 
 // 3.
 console.log(lastNameList.sort());
 
 // 4.
-console.log(lastNameList.indexOf(userLastName) + 1);
+for(var i = 0; i < lastNameInsert.length; i++){
+    console.log(lastNameList.indexOf(lastNameInsert[i]) + 1);
+}
+console.log(lastNameInsert);
