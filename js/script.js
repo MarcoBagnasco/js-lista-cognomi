@@ -20,5 +20,7 @@ lastNameList.push(userLastName);
 console.log(lastNameList); //test
 
 // 3.
-lastNameList.sort();
-console.log(lastNameList);
+console.log(lastNameList.sort());
+
+// 4.
+console.log(lastNameList.indexOf(userLastName) + 1);
