@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lastname List</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- APP HEADER -->
+    <header class="app-header">
+        <h1>Lastname List</h1>
+    </header>
+
+    <!-- APP MAIN -->
+    <main class="app-main">
+        <div class="list-container">
+            <!-- Unsorted List -->
+            <div class="unsorted">
+                <h2>Unsorted</h2>
+                <ol id="unsorted-list"></ol>
+            </div>
+            <!-- Sorted List -->
+            <div class="sorted">
+                <h2>Sorted</h2>
+                <ol id="sorted-list"></ol>
+            </div>
+        </div>
+    </main>
     
+    <!-- APP FOOTER -->
+    <footer class="app-footer">
+            The lastname inserts are in position: 
+            <ul id="position-list"></ul>
+    </footer>
+
     <!-- JAVASCRIPT -->
     <script src="./js/script.js"></script>
 </body>

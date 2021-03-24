@@ -8,29 +8,37 @@ LISTA COGNOMI
 
 
 
-// 1.
+// 1. // 2.
 var lastNameList = ['rossi', 'duzioni', 'bagnasco', 'giorgini', 'balsano', 'perlari'];
-// console.log(lastNameList); //test
+
 var lastNameInsert = [];
 var end = '-1';
 do{
-    var userLastName = prompt('Insert lastname (-1 to end)').toLocaleLowerCase();
+    var userLastName = prompt('Insert lastname (-1 to end)').toLocaleLowerCase().trim();
     if(userLastName != end){
         lastNameList.push(userLastName);
         lastNameInsert.push(userLastName);
     }
 } while (userLastName != end)
 
-// console.log(userLastName); //test
-
-// 2.
-console.log(lastNameList); //test
+// Print unsorted array
+var items ='';
+for(var i = 0; i < lastNameList.length; i++){
+    items += '<li>' + lastNameList[i] + '</li>';
+}
+document.getElementById('unsorted-list').innerHTML = items;
 
 // 3.
 console.log(lastNameList.sort());
+items = '';
+for(var i = 0; i < lastNameList.length; i++){
+    items += '<li>' + lastNameList[i] + '</li>';
+}
+document.getElementById('sorted-list').innerHTML = items;
 
 // 4.
+items = '';
 for(var i = 0; i < lastNameInsert.length; i++){
-    console.log(lastNameList.indexOf(lastNameInsert[i]) + 1);
+    items += '<li>' + (lastNameList.indexOf(lastNameInsert[i]) + 1) + '</li>';
 }
-console.log(lastNameInsert);
+document.getElementById('position-list').innerHTML = items;
