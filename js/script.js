@@ -1,12 +1,10 @@
 /*
-LISTA COGNOMI
+    LISTA COGNOMI
     1. chiedi all’utente il cognome
     2. inseriscilo in un array con altri cognomi
     3. stampa la lista ordinata alfabeticamente
     4. scrivi anche la posizione "umana"
  */
-
-
 
 // 1. // 2.
 var lastNameList = ['rossi', 'duzioni', 'bagnasco', 'giorgini', 'balsano', 'perlari'];
@@ -24,7 +22,12 @@ do{
 // Print unsorted array
 var items ='';
 for(var i = 0; i < lastNameList.length; i++){
-    items += '<li>' + lastNameList[i] + '</li>';
+
+    if(lastNameInsert.includes(lastNameList[i])){
+        items += '<li class="insert">' + lastNameList[i] + '</li>'; 
+    } else{
+        items += '<li>' + lastNameList[i] + '</li>';
+    }
 }
 document.getElementById('unsorted-list').innerHTML = items;
 
@@ -32,7 +35,11 @@ document.getElementById('unsorted-list').innerHTML = items;
 console.log(lastNameList.sort());
 items = '';
 for(var i = 0; i < lastNameList.length; i++){
-    items += '<li>' + lastNameList[i] + '</li>';
+    if(lastNameInsert.includes(lastNameList[i])){
+        items += '<li class="insert">' + lastNameList[i] + '</li>'; 
+    } else{
+        items += '<li>' + lastNameList[i] + '</li>';
+    }
 }
 document.getElementById('sorted-list').innerHTML = items;
 
